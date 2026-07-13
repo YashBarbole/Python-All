@@ -1,56 +1,85 @@
+# ==========================================
+# PYTHON LISTS - QUICK NOTES
+# ==========================================
+
+# List = Ordered, Mutable (can change), Allows duplicates
+
 my_list = [1, 2, 3, 4, 5]
 
+print("Original:", my_list)
+
+# ------------------------------------------
+# SLICING
+# list[start:end:step]
+# start -> included
+# end   -> excluded
+# ------------------------------------------
+
+print(my_list[:])      # Entire list
+print(my_list[:3])     # First 3 elements
+print(my_list[2:])     # From index 2 to end
+print(my_list[-3:])    # Last 3 elements
+print(my_list[::2])    # Every 2nd element
+print(my_list[::-1])   # Reverse list
+
+# Same as [-3:]
+print(my_list[len(my_list)-3 : len(my_list)])
+
+# ------------------------------------------
+# LIST METHODS
+# ------------------------------------------
+
+my_list.append(6)      # Add at end
 print(my_list)
 
-
-print(my_list[-3:])
-print(my_list[3:])
-
-# what it does is
-print(my_list[len(my_list) - 3 : len(my_list)])
-# i want more ex here
-
-print(my_list[len(my_list) - 1 : len(my_list)])
-
-
-# total length - something and print from that to end
-
-print(my_list[::2])
-
-
-# print(my_list.append("hero"))
-
-
-# lists are mutable
-
-
-# print(my_list.insert(1, "good"))
-
-
-print("reverseeeeeeeeeeeeeee")
-# reverse lists
-
-
-print(my_list[::-1])
-
-for i in reversed(my_list):
-    print(i)
-
-
-my_list.reverse()
+my_list.insert(1, 100) # Insert at index
 print(my_list)
-# permanent
 
-my_list.pop()
+my_list.remove(100)    # Remove by value
 print(my_list)
-# deletes last element
 
+my_list.pop()          # Remove last element
+print(my_list)
 
-# list comprehension 
-#hey claude add here neat ex tell whats list comprehensoin ok my bro plaese doneat
-new_list = [i * i for i in my_list if (i % 2) == 0]
+my_list.reverse()      # Permanent reverse
+print(my_list)
+
+# ------------------------------------------
+# LIST COMPREHENSION
+# Short way to create a new list
+# Syntax:
+# [expression for item in iterable if condition]
+# ------------------------------------------
+
+numbers = [1, 2, 3, 4, 5]
+
+# Squares of even numbers
+new_list = [i*i for i in numbers if i % 2 == 0]
 print(new_list)
-# new_list = []
-# for i in my_list:
-#     new_list.append(i * i)
-# print(new_list)
+
+# Same using for loop
+result = []
+for i in numbers:
+    if i % 2 == 0:
+        result.append(i*i)
+
+print(result)
+
+# More examples
+print([i*2 for i in numbers])          # Double numbers
+print([i for i in numbers if i > 2])   # Numbers > 2
+print([str(i) for i in numbers])       # Convert to strings
+
+# ------------------------------------------
+# Important Points
+# ------------------------------------------
+
+# ✔ Ordered
+# ✔ Mutable
+# ✔ Allows duplicates
+# ✔ Supports indexing & slicing
+# ✔ append() -> Add
+# ✔ insert() -> Insert
+# ✔ remove() -> Remove by value
+# ✔ pop() -> Remove by index (default last)
+# ✔ reverse() -> Reverse permanently
