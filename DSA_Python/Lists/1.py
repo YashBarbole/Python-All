@@ -64,19 +64,45 @@ class MyList:
 
         for i in range(self.n):
             if self.A[i]== item:
-                  print(i)
+                return i
           
-        print("'item not in list'")
+        return"not in list"
     
-    def insert(self):
+    def insert(self,pos,item):
+        if self.n==self.size:
+            self.resize(self.size*2)
         
+        for i in range (self.n,pos,-1):
+            self.A[i]=self.A[i-1]
+        
+        self.A[pos]=item
+        self.n+=1
+    
+    def __delitem__(self, pos):
+        if 0<=pos<self.n:
+         for i in range (pos,self.n-1):
+            self.A[i]=self.A[i+1]
+        
+        self.n=self.n-1
 
+    def remove(self,item):
+       pos= self.find(item)
+
+       if type(pos)== int:
+           self.__delitem__(pos)
+           
+       else:
+           return pos
+           
 
 
         
+ 
+        
     
 
-    
+
+        
 
 l= MyList()
 print(len(l))
@@ -93,3 +119,12 @@ print(l)
 print(l)
 
 l.find("hello 6")
+
+l.insert(0,0)
+print(l)
+
+del l[3]
+print(l)
+
+l.remove(0)
+print(l)
