@@ -53,34 +53,43 @@ class MyList:
         if self.n==0:
             return "empty list"
         
-        print(self.A[self.n-1])
+       
         self.n= self.n-1
 
     def clear(self):
         self.size=1
         self.n=0
 
-    def 
+    def find(self,item):
+
+        for i in range(self.n):
+            if self.A[i]== item:
+                  print(i)
+          
+        print("'item not in list'")
+    
+    def insert(self):
+        
+
 
 
         
     
 
     
-        
-
-
-
 
 l= MyList()
 print(len(l))
 l.append("hello 1")
 l.append("hello 2")
 l.append("hello 3")
+l.append(4)
 
 print(l)
 l.pop()
 print(l)
 
-l.clear()
+
 print(l)
+
+l.find("hello 6")
