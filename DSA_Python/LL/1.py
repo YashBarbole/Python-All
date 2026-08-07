@@ -3,5 +3,3 @@
 # collection of nodes 
 # no contiguos memo locations
 
-
-# has to be started bro
