@@ -1,5 +1,7 @@
-# its linear data structure 
+# its linear data structure
 # reaplacement for array bro
-# collection of nodes 
+# collection of nodes
 # no contiguos memo locations
 
+# read heavy app- arr
+# write heavy - LL
