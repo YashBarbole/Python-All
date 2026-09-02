@@ -9,3 +9,6 @@ def factorial(n):
 
 
 print(factorial(5))
+
+# tc O(n)
+# sc O(n)
