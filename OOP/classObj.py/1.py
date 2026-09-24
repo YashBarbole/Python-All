@@ -10,8 +10,7 @@
 
 
 class Atm:
-    # constructor is special fun ->
-
+    # constructor is special fun -> it is called when an object of the class is created
     def __init__(self):
         self.pin = ""
         self.balance = 0
@@ -87,4 +86,21 @@ class Atm:
         self.menu()
 
 
-myatm = Atm()
+# myatm = Atm()
+
+myatm2 = Atm()
+# by default balance is 0 and pin is blank
+
+print(myatm2.balance)
+# what will it print here
+# it will print 0 because when the Atm object is created, the balance is initialized to 0 in the constructor.
+# why not priting zero
+# because the menu method is called in the constructor, it waits for user input before reaching the print statement.
+
+# what is self
+# self represents the instance of the class. By using the self keyword we can access the attributes and methods of the class in python.
+
+# methods vs functions
+# give in short
+# methods are functions that are defined inside a class and are called on an instance of the class.
+# functions are standalone blocks of code that are not associated with any class.
